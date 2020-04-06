@@ -1,16 +1,15 @@
 "use strict";
-var Greeter = /** @class */ (function () {
-    function Greeter(n) {
+class Greeter {
+    constructor(n) {
         this.name = n;
     }
-    Greeter.prototype.sayHello = function () {
+    sayHello() {
         console.log("Hello " + this.name);
-    };
-    return Greeter;
-}());
+    }
+}
 function sortByName(a) {
     var result = a.slice(0);
-    result.sort(function (x, y) {
+    result.sort((x, y) => {
         return x.name.localeCompare(y.name);
     });
     return result;
